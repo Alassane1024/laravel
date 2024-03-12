@@ -24,7 +24,7 @@ Accueil
         <h1 class="display-4">Bienvenue chez <p class="span">SANOGO <span>Transport</span></p></h1>
         <img src="/image/img.jpg" class="img-fluid mb-3" alt="Image d'accueil">
 
-        {{-- <p class="lead">Nous sommes fiers de vous offrir nos services de transport de qualité.</p> --}}
+        <p class="lead">Nous sommes fiers de vous offrir nos services de transport de qualité.</p>
         <hr class="my-4">
         <p>Naviguez à travers notre site pour découvrir nos offres et réserver dès maintenant.</p>
         {{-- <a id="reserveButton" class="btn btn-primary btn-lg" href="{{route('apropos')}}" role="button">Réservez maintenant</a> --}}
