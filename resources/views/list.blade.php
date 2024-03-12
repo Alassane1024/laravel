@@ -17,6 +17,7 @@ Accueil
                 <th>Nombre de Places</th>
                 <th>Départ</th>
                 <th>Arrivée</th>
+                <th>Frais de Transport</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,9 +27,10 @@ Accueil
                 <td>{{ $bus->id }}</td>
                 <td>{{ $bus->marque }}</td>
                 <td>{{ $bus->couleur }}</td>
-                <td>{{ $bus->nombre_de_place }}</td>
+                <td>{{ $bus->nombre_de_places }}</td>
                 <td>{{ $bus->depart }}</td>
-                <td>{{ $bus->arriver }}</td>
+                <td>{{ $bus->arrivee }}</td>
+                <td>{{ $bus->frais_de_transport }}</td>
                 <td>
                     <a href="{{ route('bus.edit', $bus->id) }}" class="btn btn-sm btn-primary">Modifier</a>
                     <form action="{{ route('bus.destroy', $bus->id) }}" method="POST" style="display: inline;">

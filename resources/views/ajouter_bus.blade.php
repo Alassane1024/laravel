@@ -20,21 +20,23 @@ Accueil
             <input type="text" class="form-control" id="couleur" name="couleur" required>
         </div>
         <div class="form-group">
-            <label for="nombre_de_place">Nombre de Places :</label>
-            <input type="number" class="form-control" id="nombre_de_place" name="nombre_de_place" required>
+            <label for="nombre_de_places">Nombre de Places :</label>
+            <input type="number" class="form-control" id="nombre_de_places" name="nombre_de_places" required>
         </div>
         <div class="form-group">
             <label for="depart">Départ :</label>
             <input type="text" class="form-control" id="depart" name="depart" required>
         </div>
         <div class="form-group">
-            <label for="arriver">Arrivée :</label>
-            <input type="text" class="form-control" id="arriver" name="arriver" required>
+            <label for="arrivee">Arrivée :</label>
+            <input type="text" class="form-control" id="arrivee" name="arrivee" required>
         </div>
-        <button type="submit" class="btn btn-primary">Valider</button>
+        <div class="form-group">
+            <label for="frais_de_transport">Frais de Transport :</label>
+            <input type="number" class="form-control" id="frais_de_transport" name="frais_de_transport" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>
 </div>
 
 
-{{-- 
-@endsection --}}

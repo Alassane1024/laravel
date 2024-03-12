@@ -1,5 +1,7 @@
 <?php
 
+// app/Http/Controllers/BusController.php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,8 +11,8 @@ class BusController extends Controller
 {
     public function index()
     {
-        $bus = Bus::all();
-        return view('list', compact('bus'));
+        $buses = Bus::all();
+        return view('list', compact('buses'));
     }
 
     public function create()
@@ -23,14 +25,15 @@ class BusController extends Controller
         $request->validate([
             'marque' => 'required',
             'couleur' => 'required',
-            'nombre_de_place' => 'required|numeric',
+            'nombre_de_places' => 'required|integer',
             'depart' => 'required',
-            'arriver' => 'required',
+            'arrivee' => 'required',
+            'frais_de_transport' => 'nullable|numeric',
         ]);
 
         Bus::create($request->all());
 
-        return redirect()->route('bus.index')->with('success', 'Bus ajouté avec succès!');
+        return redirect()->route('list')->with('success', 'Bus ajouté avec succès.');
     }
 
     public function edit($id)
@@ -44,15 +47,16 @@ class BusController extends Controller
         $request->validate([
             'marque' => 'required',
             'couleur' => 'required',
-            'nombre_de_place' => 'required|numeric',
+            'nombre_de_places' => 'required|integer',
             'depart' => 'required',
-            'arriver' => 'required',
+            'arrivee' => 'required',
+            'frais_de_transport' => 'nullable|numeric',
         ]);
 
         $bus = Bus::findOrFail($id);
         $bus->update($request->all());
 
-        return redirect()->route('bus.index')->with('success', 'Bus modifié avec succès!');
+        return redirect()->route('list')->with('success', 'Bus modifié avec succès.');
     }
 
     public function destroy($id)
@@ -60,7 +64,6 @@ class BusController extends Controller
         $bus = Bus::findOrFail($id);
         $bus->delete();
 
-        return redirect()->route('bus.index')->with('success', 'Bus supprimé avec succès!');
+        return redirect()->route('list')->with('success', 'Bus supprimé avec succès.');
     }
 }
-

@@ -60,22 +60,22 @@ Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 
 // Liste des bus
-Route::get('/bus', [BusController::class, 'index'])->name('bus.index');
+Route::get('/buses', [BusController::class, 'index'])->name('bus.index');
 
 // Afficher le formulaire pour ajouter un bus
-Route::get('/bus/create', [BusController::class, 'create'])->name('bus.create');
+Route::get('/buses/create', [BusController::class, 'create'])->name('bus.create');
 
 // Ajouter un nouveau bus
-Route::post('/bus', [BusController::class, 'store'])->name('bus.store');
+Route::post('/buses', [BusController::class, 'store'])->name('bus.store');
 
 // Afficher le formulaire pour modifier un bus
-Route::get('/bus/{id}/edit', [BusController::class, 'edit'])->name('bus.edit');
+Route::get('/buses/{id}/edit', [BusController::class, 'edit'])->name('bus.edit');
 
 // Mettre à jour les informations d'un bus
-Route::put('/bus/{id}', [BusController::class, 'update'])->name('bus.update');
+Route::put('/buses/{id}', [BusController::class, 'update'])->name('bus.update');
 
 // Supprimer un bus
-Route::delete('/bus/{id}', [BusController::class, 'destroy'])->name('bus.destroy');
+Route::delete('/buses/{id}', [BusController::class, 'destroy'])->name('bus.destroy');
 
 
 
