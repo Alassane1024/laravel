@@ -3,6 +3,8 @@
 Accueil
 @endsection
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 @section("content")
 <style>
 span{
@@ -69,9 +71,9 @@ span{
                 <h5>Liens Utiles</h5>
                 <ul class="list-unstyled">
                     <li><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
-                    {{-- <li><a class="nav-link" href="{{route('apropos')}}">Reservez</a></li> --}}
+                    <li><a class="nav-link" href="{{route('reservez')}}">Reservez</a></li>
                     <li><a class="nav-link" href="{{route('contact')}}">Contactez nous</a></li>
-                    {{-- <li><a class="nav-link" href="{{route('index')}}">List des bus</a></li> --}}
+                    <li><a class="nav-link" href="{{route('list')}}">List des bus</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

@@ -24,7 +24,7 @@ Accueil
         <h1 class="display-4">Bienvenue chez <p class="span">SANOGO <span>Transport</span></p></h1>
         <img src="/image/img.jpg" class="img-fluid mb-3" alt="Image d'accueil">
 
-        <p class="lead">Nous sommes fiers de vous offrir nos services de transport de qualité.</p>
+        {{-- <p class="lead">Nous sommes fiers de vous offrir nos services de transport de qualité.</p> --}}
         <hr class="my-4">
         <p>Naviguez à travers notre site pour découvrir nos offres et réserver dès maintenant.</p>
         {{-- <a id="reserveButton" class="btn btn-primary btn-lg" href="{{route('apropos')}}" role="button">Réservez maintenant</a> --}}
@@ -57,9 +57,9 @@ Accueil
                 <h5>Liens Utiles</h5>
                 <ul class="list-unstyled">
                     <li><a class="nav-link" href="{{route('accueil')}}">Accueil</a></li>
-                    {{-- <li><a class="nav-link" href="{{route('apropos')}}">Reservez</a></li> --}}
+                    <li><a class="nav-link" href="{{route('reservez')}}">Reservez</a></li>
                     <li><a class="nav-link" href="{{route('contact')}}">Contactez nous</a></li>
-                    {{-- <li><a class="nav-link" href="{{route('index')}}">List des bus</a></li> --}}
+                    <li><a class="nav-link" href="{{route('list')}}">List des bus</a></li>
                 </ul>
             </div>
             <div class="col-md-4">

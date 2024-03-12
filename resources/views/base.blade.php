@@ -10,6 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Dans la section head de votre fichier de mise en page -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-rAbo8rmdJb2VtfmIQzJ3rf6xwQ1VU9WmtKWaB1O37LHVW3thIQudNBaRz6oqSjwXzgxyd9qlSFDm29ARagHa9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* Custom styles */
         body {
@@ -51,6 +54,7 @@ nav a{
     text-decoration: none;
     color: black;
 }
+
     </style>
 </head>
 <body>
@@ -64,16 +68,22 @@ nav a{
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('accueil')}}">Accueil</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="{{route('apropos')}}">Reservez</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('reservez')}}">Reservez</a>
                 </li>
-                <li class="nav-item"> --}}
+                <li class="nav-item">
                     <a class="nav-link" href="{{route('contact')}}">Contactez nous</a>
                 </li>
-                {{-- <li class="nav-item transport-link">
-                    <a class="nav-link" href="{{route('index')}}">List des bus</a>
-                </li> --}}
+                <li class="nav-item transport-link">
+                    <a class="nav-link" href="{{route('list')}}">List des bus</a>
+                </li>
+                <li class="nav-item transport-link">
+                    <a class="nav-link" href="{{route('login')}}"> <i class="fas fa-sign-out-alt"></i><span> Déconnexion</span></a>
+                </li>
+
+
             </ul>
+
         </div>
     </nav>
 
