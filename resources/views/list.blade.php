@@ -24,13 +24,13 @@ Accueil
         <tbody>
             @foreach ($bus as $bus)
             <tr>
-                <td>{{ $bus->id }}</td>
-                <td>{{ $bus->marque }}</td>
-                <td>{{ $bus->couleur }}</td>
-                <td>{{ $bus->nombre_de_places }}</td>
-                <td>{{ $bus->depart }}</td>
-                <td>{{ $bus->arrivee }}</td>
-                <td>{{ $bus->frais_de_transport }}</td>
+                <td>{{$bus->id}}</td>
+                <td>{{$bus->marque}}</td>
+                <td>{{$bus->couleur}}</td>
+                <td>{{$bus->nombre_de_places}}</td>
+                <td>{{$bus->depart}}</td>
+                <td>{{$bus->arrivee}}</td>
+                <td>{{bus->frais_de_transport}}</td>
                 <td>
                     <a href="{{ route('bus.edit', $bus->id) }}" class="btn btn-sm btn-primary">Modifier</a>
                     <form action="{{ route('bus.destroy', $bus->id) }}" method="POST" style="display: inline;">
@@ -44,4 +44,3 @@ Accueil
         </tbody>
     </table>
 </div>
-
