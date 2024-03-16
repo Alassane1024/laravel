@@ -51,7 +51,8 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact');
 Route::post('/contact', [ContactController::class, 'submitForm']);
-// routes/web.php
+
+
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 

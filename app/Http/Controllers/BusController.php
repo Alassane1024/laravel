@@ -1,7 +1,5 @@
 <?php
 
-// app/Http/Controllers/BusController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -12,7 +10,7 @@ class BusController extends Controller
     public function index()
     {
         $buses = Bus::all();
-        return view('list', compact('buses'));
+        return view('list', ['buses' => $buses]);
     }
 
     public function create()
@@ -56,7 +54,7 @@ class BusController extends Controller
         $bus = Bus::findOrFail($id);
         $bus->update($request->all());
 
-        return redirect()->route('list')->with('success', 'Bus modifié avec succès.');
+        return redirect()->route('buses.index')->with('success', 'Bus modifié avec succès.');
     }
 
     public function destroy($id)
@@ -64,6 +62,7 @@ class BusController extends Controller
         $bus = Bus::findOrFail($id);
         $bus->delete();
 
-        return redirect()->route('list')->with('success', 'Bus supprimé avec succès.');
+        return redirect()->route('buses.index')->with('success', 'Bus supprimé avec succès.');
     }
+    
 }
